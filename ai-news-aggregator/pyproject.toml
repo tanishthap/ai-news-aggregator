@@ -1,0 +1,37 @@
+[project]
+name = "ai-news-aggregator"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "tanishhta", email = "tpapadka@asu.edu" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "feedparser>=6.0.14",
+    "google-genai>=1.0.0",
+    "httpx>=0.28.1",
+    "ipykernel>=7.3.0",
+    "openai>=2.53.0",
+    "psycopg[binary]>=3.3.4",
+    "pydantic>=2.13.4",
+    "pydantic-settings>=2.14.2",
+    "python-dotenv>=1.2.2",
+    "requests>=2.34.2",
+    "sqlalchemy>=2.0.51",
+    "trafilatura>=2.2.0",
+    "typer>=0.27.1",
+    "youtube-transcript-api>=1.2.4",
+]
+
+[project.scripts]
+ai-news-aggregator = "ai_news_aggregator:main"
+
+[build-system]
+requires = ["uv_build>=0.12.1,<0.13.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "ipykernel>=7.3.0",
+]
